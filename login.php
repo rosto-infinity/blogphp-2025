@@ -11,7 +11,7 @@ $pageTitle ="Se connecter dans le Blog";
  
 ob_start();
 
-// inclure le layout de la page login
+// 3-inclure le layout de la page login
 require_once 'layouts/articles/login_html.php';
 
 //recuperation du contenu du tampon de la page de login
