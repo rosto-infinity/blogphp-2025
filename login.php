@@ -3,7 +3,7 @@ session_start();
 require_once 'database/database.php';
 
 
-// On affiche le titre
+// 1-On affiche le titre
 
 $pageTitle ="Se connecter dans le Blog"; 
 
