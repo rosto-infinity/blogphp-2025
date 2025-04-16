@@ -4,8 +4,6 @@
       <h2>S'inscrire</h2>
     </div>
 
-
-
     <form action="register" class="form" id="form" method="post" enctype="multipart/form-data">
 
       <div class="form-control">
@@ -13,9 +11,6 @@
         <input type="text" id="username" placeholder="rostodev" name="username" autocomplete="off"
           value="<?= isset($_POST['username']) ? $_POST['username'] : '' ?>">
       </div>
-
-
-
 
       <div class="form-control">
         <label for="email">Email</label>
