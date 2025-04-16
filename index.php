@@ -9,7 +9,7 @@ $pageTitle ='Accueil du Blog';
  
 ob_start();
 
-// inclure le layout de la page d' accueil
+// 3-inclure le layout de la page d' accueil
 require_once 'layouts/articles/index_html.php';
 
 //recuperation du contenu du tampon de la page d'accueil
