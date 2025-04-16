@@ -16,5 +16,5 @@ require_once 'layouts/articles/register_html.php';
 //4-recuperation du contenu du tampon de la page register
 $pageContent = ob_get_clean();
 
-//Inclure le layout de la page de sortie
+//5-Inclure le layout de la page de sortie
 require_once 'layouts/layout_html.php';
