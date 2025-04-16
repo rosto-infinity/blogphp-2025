@@ -1,7 +1,7 @@
 <?php
 require_once 'database/database.php';
 
-// On affiche le titre
+// 1-On affiche le titre
 
 $pageTitle ='Accueil du Blog'; 
 
