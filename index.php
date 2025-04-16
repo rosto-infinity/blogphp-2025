@@ -12,7 +12,7 @@ ob_start();
 // 3-inclure le layout de la page d' accueil
 require_once 'layouts/articles/index_html.php';
 
-//recuperation du contenu du tampon de la page d'accueil
+//4-recuperation du contenu du tampon de la page d'accueil
 $pageContent = ob_get_clean();
 
 //Inclure le layout de la page de sortie
