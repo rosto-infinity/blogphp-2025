@@ -5,7 +5,7 @@ require_once 'database/database.php';
 
 $pageTitle ='Accueil du Blog'; 
 
-// Debut du tampon de la page de sortie
+// 2-Debut du tampon de la page de sortie
  
 ob_start();
 
