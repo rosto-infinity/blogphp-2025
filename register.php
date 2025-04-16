@@ -10,7 +10,7 @@ $pageTitle ="S'inscrire dans le Blog";
  
 ob_start();
 
-// inclure le layout de la page register
+// 3-inclure le layout de la page register
 require_once 'layouts/articles/register_html.php';
 
 //recuperation du contenu du tampon de la page register
