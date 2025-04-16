@@ -7,7 +7,7 @@ require_once 'database/database.php';
 
 $pageTitle ="Se connecter dans le Blog"; 
 
-// Debut du tampon de la page de sortie
+// 2-Debut du tampon de la page de sortie
  
 ob_start();
 
