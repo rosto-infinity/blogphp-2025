@@ -1,265 +1,245 @@
-/*___________________________________________________*\
-
-    #Variables pour les couleurs
-\*___________________________________________________*/
-
+/*───────────────────────────────────────────
+  Variables globales
+───────────────────────────────────────────*/
 :root {
-
+  /* Couleurs */
   --color-first: #0F172A;
   --color-second: #F0F0F0;
   --color-white: #FFF;
   --color-success: #2ECC71;
   --color-error: #E74C3C;
-  --color-cyan: #8c2c2c;
+  --color-cyan: #0afc1e;
+  --color-text: #333;
 
-  --linear-gradient: linear-gradient(45deg, var(--color-first),
-      var(--color-success));
-  /*
-        * Typographique
-    */
+  /* Typographie fluide */
+  --fs-1: clamp(1.5rem, 3vw, 2.5rem);
+  --fs-2: clamp(1.4rem, 3vw, 2rem);
+  --fs-3: clamp(1rem, 2.5vw, 2rem);
+  --fs-4: clamp(0.9rem, 2vw, 1.8rem);
+  --fs-5: clamp(0.8rem, 1.8vw, 1.5rem);
+  --fs-6: clamp(0.7rem, 1.5vw, 1.4rem);
+  --fs-7: clamp(0.65rem, 1.2vw, 1.2rem);
+  --fs-8: clamp(0.7rem, 1.2vw, 1.3rem);
+  --fs-9: clamp(0.6rem, 1vw, 1rem);
+  
 
-  /* Font family*/
+  /* Espacements */
+  --sp-xs: 0.3rem;
+  --sp-sm: 1rem;
+  --sp-md: 1.5rem;
+  --sp-lg: 2.5rem;
 
-
-  /* Font size*/
-  --fontSize-1: 4rem;
-  --fontSize-2: 3.2rem;
-  --fontSize-3: 2.4rem;
-  --fontSize-4: 2rem;
-  --fontSize-5: 1.8rem;
-  --fontSize-6: 1.6rem;
-  --fontSize-7: 1.4rem;
-  --fontSize-8: 1rem;
-  --fontSize-9: 0.8rem;
-
-  /* Font weight*/
-  --weight-Light: 300;
-  --weight-Regular: 500;
-  --weight-SemiBold: 600;
-  --weight-Bold: 700;
-  --weight-ExtratBold: 900;
-
+  /* Rayons & ombres */
+  --radius: 0.5rem;
+  --shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
 
-
-
-/* Font family*/
-
-@font-face {
-  font-family: "title";
-  src: url(/assets/fonts/FrederickatheGreat-Regular.ttf);
-}
-
-/*___________________________________________________*\
-
-    #reset
-\*___________________________________________________*/
+/*───────────────────────────────────────────
+  Reset & base
+───────────────────────────────────────────*/
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  transition: .2s linear;
-  outline: none;
-
-
+  transition: 0.2s linear;
 }
 
 html {
+  font-size: var(--fs-8);
   scroll-behavior: smooth;
 }
 
 body {
-  font-family: 'Poppins';
-  background-color: rgb(255, 255, 255);
-
+  font-family: 'Poppins', sans-serif;
+  background: var(--color-white);
+  color: var(--color-text);
+  line-height: 1.6;
 }
 
+/*───────────────────────────────────────────
+  Structure générale
+───────────────────────────────────────────*/
 .main {
-  padding: 40px;
+padding: 30px !important;
+
 }
 
 header {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  background-color: var(--color-first);
+  justify-content: space-between;
+  padding: var(--sp-sm) var(--sp-md);
+  background: var(--color-first);
   color: var(--color-cyan);
-  height: 80px;
+  height: auto;
 }
 
-ul {
+header h2 a {
+  font-family: 'FrederickatheGreat', cursive;
+  font-size: var(--fs-3);
+  color: var(--color-white) !important;
+  text-decoration: none;
+}
+
+nav ul {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  gap: var(--sp-sm);
 }
 
 nav ul li {
   list-style: none;
-  margin: 0 10px;
 }
 
 nav ul li a {
-
+  font-size: var(--fs-8);
   color: var(--color-cyan);
   text-decoration: none;
-  border: 2px solid;
-  border-left: 0px;
-  border-top: 0px;
-  border-bottom: 0px;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+nav ul li a:hover,
+nav ul li a:focus {
   border-color: var(--color-cyan);
-  padding-right: 5px;
-
+  letter-spacing: 1px;
+}
+nav ul li a:active {
+  background: rgb(2,121,175);
+  color: var(--color-white);
 }
 
-a#gcu {
-  color: white;
+/*───────────────────────────────────────────
+  Conteneur principal
+───────────────────────────────────────────*/
+.container {
+  width: 80%;
+  max-width: 360px;
+  margin: var(--sp-md) auto 0;
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  
+}
+
+.header {
+  background: var(--color-first);
+  color: var(--color-cyan);
+  padding: var(--sp-sm) var(--sp-sm);
+  text-align: center;
+  border-bottom: 1px solid var(--color-second);
+}
+
+.logo h2 a {
+  font-family: 'FrederickatheGreat', cursive;
+  font-size: var(--fs-4);
+  color: var(--color-white) !important;
   text-decoration: none;
 }
 
-nav ul li a:hover {
-  color: var(--color-cyan) !important;
-  /* background-color: green; */
-  font-size: 17px;
-  letter-spacing: 2px;
-
+/*───────────────────────────────────────────
+  Formulaire
+───────────────────────────────────────────*/
+.form {
+  padding: var(--sp-sm);
 }
 
-nav ul li a:active {
-  color: #F0F0F0;
-  background-color: rgb(2, 121, 175);
+.form-control {
+  margin-bottom: var(--sp-md);
+  position: relative;
+}
+.form-control label {
+  display: block;
+  margin-bottom: var(--sp-xs);
+  font-size: var(--fs-9);
+}
+.form-control input, .form-control input[type="text"]
+{
+  width: 70%;
+  height: 2.5rem;
+  padding: 0 var(--sp-sm);
+  font-size: var(--fs-8);
+  border: 1px solid var(--color-second);
+  border-radius: var(--radius);
+}
+.form-control input:focus {
+  border-color: var(--color-first);
+  outline: none;
 }
 
+.form button {
+  width: 70%;
+  padding: var(--sp-sm);
+  font-size: var(--fs-6);
+  background: var(--color-first);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+.form button:hover {
+  background: var(--color-cyan);
+  color: var(--color-first);
+}
+
+/*───────────────────────────────────────────
+  Autres éléments
+───────────────────────────────────────────*/
 .content {
   display: grid;
-  justify-content: center;
-  align-items: center;
+  place-items: center;
 }
 
 .remember label input {
-  margin-bottom: 25px;
-  font-size: 23px;
+  font-size: var(--fs-4);
+  margin-bottom: var(--sp-md);
 }
 
 a.passforget {
   color: var(--color-cyan);
-  text-decoration: none;
   font-weight: 800;
-
-}
-
-.container {
-  background-color: var(--color-white);
-  border-radius: 5px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-  width: 500px;
-  max-width: 100%;
-  margin-top: 20px;
-}
-
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-bottom: 1px solid var(--color-second);
-  background-color: var(--color-first);
-  color: var(--color-cyan);
-
-  padding: 20px 40px;
-}
-
-.logo h2 a,
-header h2 a {
-  text-align: center;
-  /* font-size: 16px; */
-  color: white !important;
   text-decoration: none;
 }
 
-.form {
-  padding: 20px 30px;
-}
-
-.form-control {
-  padding-bottom: 20px;
-  margin-bottom: 10px;
-  position: relative;
-}
-
-.form-control label {
-  display: inline-block;
-  margin-bottom: 5px;
-}
-
-.form-control input {
-  border: 2px solid var(--color-second);
-  border-radius: 4px;
-  display: block;
-  font-family: inherit;
-  font-size: 14px;
-  height: 40px;
-  width: 100%;
-  padding-left: 10px;
-}
-
-
-
-.form button {
-  background-color: var(--color-first);
-  border: 2px solid;
-  color: var(--color-white);
-  display: block;
-  font-family: inherit;
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 16px;
-  width: 100%;
-  cursor: pointer;
-}
-
-.form button:hover {
-  background-color: var(--color-cyan);
-  ;
-  color: var(--color-first);
-  border: none;
-
-}
-
-
+/*───────────────────────────────────────────
+  Alertes
+───────────────────────────────────────────*/
 .alert {
-  padding: 10px;
-  margin-bottom: 10px;
-  border-radius: 4px;
+  padding: var(--sp-sm);
+  margin-bottom: var(--sp-md);
+  border-radius: var(--radius);
+  font-size: var(--fs-9);
 }
-
-.alert-success {
-  background-color: #dff0d8;
-  color: #3c763d;
-}
-
-.alert-error {
-  background-color: #ff6c6c;
-  color: #ffffff;
-}
-
-.alert-warning {
-  background-color: #fcf8e3;
-  color: #8a6d3b;
-}
-
+.alert-success,
 .success {
-  background-color: #dff0d8;
-  color: #3c763d;
+  background: var(--color-success);
+  color: var(--color-white);
 }
-
+.alert-error,
 .error,
 .danger {
-  background-color: #ff6c6c;
-  color: #ffffff;
+  background: var(--color-error);
+  color: var(--color-white);
+}
+.alert-warning,
+.warning {
+  background: #fcf8e3;
+  color: #8a6d3b;
 }
 
-.warning {
-  background-color: #fcf8e3;
-  color: #8a6d3b;
+/*───────────────────────────────────────────
+  Responsive
+───────────────────────────────────────────*/
+@media (min-width: 48rem) {
+  html { font-size: var(--fs-7); }
+  header {
+    padding: var(--sp-sm) var(--sp-lg);
+  }
+  .main {
+    padding: var(--sp-xl);
+  }
+  nav ul li a {
+    font-size: var(--fs-7);
+  }
 }
