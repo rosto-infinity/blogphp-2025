@@ -2,7 +2,7 @@
 // 1-Démarre une nouvelle session ou reprend une session existante
 session_start();
 
-// Inclut le fichier de connexion à la base de données
+// 2Inclut le fichier de connexion à la base de données
 require_once 'database/database.php';
 
 // Définit le titre de la page
