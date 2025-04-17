@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   // var_dump($content);
   // die();
   
-  // Vérification de l'existence de l'article
+  // 4-Vérification de l'existence de l'article
   $query = $pdo->prepare('SELECT COUNT(*) FROM articles WHERE id = :article_id');
   $query->execute(['article_id' => $article_id]);
   $articleExists = $query->fetchColumn();
