@@ -17,5 +17,5 @@ require 'templates/articles/edit-article_html.php';
 // 6Récupère le contenu mis en tampon et le stocke dans la variable $pageContent
 $pageContent = ob_get_clean();
 
-// Inclut le modèle de mise en page HTML qui affichera le contenu de la page
+// 7Inclut le modèle de mise en page HTML qui affichera le contenu de la page
 require 'templates/layout_html.php';
