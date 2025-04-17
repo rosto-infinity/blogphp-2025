@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       die("Ho ! L'article $article_id n'existe pas boloss !");
   }
   
-  // Insertion du commentaire
+  // 5Insertion du commentaire
   $query = $pdo->prepare('INSERT INTO comments SET content = :content, article_id = :article_id,  user_id = :user_auth,created_at = NOW()');
   $query->execute(compact( 'content', 'article_id','user_auth'));
   
