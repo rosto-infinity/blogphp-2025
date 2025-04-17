@@ -8,7 +8,7 @@ require_once 'database/database.php';
 // 3-Définit le titre de la page
 $pageTitle = "Éditer un article";
 
-// Démarre la mise en tampon de sortie pour capturer le contenu HTML
+// 4-Démarre la mise en tampon de sortie pour capturer le contenu HTML
 ob_start();
 
 // Inclut le fichier HTML pour éditer un article
