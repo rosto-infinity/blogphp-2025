@@ -20,7 +20,7 @@ require_once "database/database.php";
  * D'abord, on récupère les informations à partir du POST
  * Ensuite, on vérifie qu'elles ne sont pas nulles
  */
-// var_dump($_SESSION['auth']['id']);
+// 6var_dump($_SESSION['auth']['id']);
 // die();
 $user_auth = $_SESSION['auth']['id'];
 
