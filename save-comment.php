@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
   
   // 4Vérification finale des infos envoyées dans le formulaire (donc dans le POST)
-  // Si il n'y a pas l'id de l'user  OU qu'il n'y a pas de contenu OU qu'il n'y a pas d'identifiant d'article
+  // DSi il n'y a pas l'id de l'user  OU qu'il n'y a pas de contenu OU qu'il n'y a pas d'identifiant d'article
   if (!$user_auth || !$article_id || !$content) {
     // var_dump($article_id );
     // die();
