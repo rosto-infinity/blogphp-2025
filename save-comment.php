@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       die("Votre formulaire a été mal rempli !");
   }
   
-  // On fait quand même gaffe à ce que le gars n'essaye pas des balises cheloues dans son commentaire
+  // 4-On fait quand même gaffe à ce que le gars n'essaye pas des balises cheloues dans son commentaire
   $content = htmlspecialchars($content);
   
   // var_dump($content);
