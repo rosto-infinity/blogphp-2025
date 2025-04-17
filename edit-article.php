@@ -11,7 +11,7 @@ $pageTitle = "Éditer un article";
 // 4-Démarre la mise en tampon de sortie pour capturer le contenu HTML
 ob_start();
 
-// Inclut le fichier HTML pour éditer un article
+// 5Inclut le fichier HTML pour éditer un article
 require 'templates/articles/edit-article_html.php';
 
 // Récupère le contenu mis en tampon et le stocke dans la variable $pageContent
