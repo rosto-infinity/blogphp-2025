@@ -5,7 +5,7 @@ session_start();
 // 2Inclut le fichier de connexion à la base de données
 require_once 'database/database.php';
 
-// Définit le titre de la page
+// 3-Définit le titre de la page
 $pageTitle = "Éditer un article";
 
 // Démarre la mise en tampon de sortie pour capturer le contenu HTML
