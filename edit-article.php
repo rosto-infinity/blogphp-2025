@@ -14,7 +14,7 @@ ob_start();
 // 5Inclut le fichier HTML pour éditer un article
 require 'templates/articles/edit-article_html.php';
 
-// Récupère le contenu mis en tampon et le stocke dans la variable $pageContent
+// 6Récupère le contenu mis en tampon et le stocke dans la variable $pageContent
 $pageContent = ob_get_clean();
 
 // Inclut le modèle de mise en page HTML qui affichera le contenu de la page
